@@ -330,19 +330,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c93374ce2527ed74a8835c3c4fedbb1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomSize: 30
-  nodeCount: 16
+  roomParent: {fileID: 1977756356}
+  roomSize: 1
+  minRoomAmount: 16
+  maxRoomAmount: 50
   spawnAttempsPerRoom: 25
   roomTypes:
-  - name: Safe Rooms
-    percentageOfToalRooms: 9
-    rooms: []
-  - name: Boss
-    percentageOfToalRooms: 1
-    rooms: []
   - name: Normal
-    percentageOfToalRooms: 90
-    rooms: []
+    minAmount: 7
+    maxAmount: 22
+    currentAmount: 0
+    percentageOfSpawningRoom: 0
+    rooms:
+    - {fileID: 7129045390639657803, guid: 4998cf70f0c61ff48a71595c0afc36ec, type: 3}
+  - name: Safe Rooms
+    minAmount: 4
+    maxAmount: 6
+    currentAmount: 0
+    percentageOfSpawningRoom: 10
+    rooms:
+    - {fileID: 1575295277575600915, guid: c919d44089a6b8f4f844dd389aaa19f7, type: 3}
+  - name: Boss
+    minAmount: 2
+    maxAmount: 5
+    currentAmount: 0
+    percentageOfSpawningRoom: 10
+    rooms:
+    - {fileID: 6651371101786519636, guid: 7455d8f3d2950dd4789ab3c432440fca, type: 3}
+  - name: Start
+    minAmount: 1
+    maxAmount: 1
+    currentAmount: 0
+    percentageOfSpawningRoom: 10
+    rooms:
+    - {fileID: 7644373052416855717, guid: 4a04548e776885a4d804a5b1c9aed685, type: 3}
 --- !u!4 &1264302536
 Transform:
   m_ObjectHideFlags: 0
@@ -357,4 +378,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1977756355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1977756356}
+  m_Layer: 0
+  m_Name: Rooms
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1977756356
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977756355}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.1178174, y: -1.2454238, z: -17.187767}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
