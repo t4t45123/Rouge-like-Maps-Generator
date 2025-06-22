@@ -1,3 +1,3 @@
-# Rouge like Maps Generator
+# Rogue like Maps Generator
  A small map generator in unity
  
